@@ -1,215 +1,5 @@
-$text-color:#333;
-$b-c-g:grey;
-$b-c-r:#E80C39;/*red*/
-$base-spacing:1em;
-$zero:0;
-$tc:center;/*text center*/
-$wi:100%;/*width 100%*/
-$linex:800px;
-$font-color:rgba(12, 232, 164, 1);
-$flex:flex;
 
-$font-family1: 'Roboto', sans-serif;
-$font-family2: 'Mina', sans-serif;
-
-
-
-
-
-
-
-
-.fontMedia{
-display: block;
-margin: 0.5em;
-padding: 0;
-text-align: center;
-color: white;
-text-decoration: none;
-font-size: 1.1em;
-display: $flex;
-flex-flow: column;
-position: fixed;
-top: 12em;
-left: -.5em;
-height: 12em;
-width: 3em;
-
-
-div{
-height: 2.5em;
-width: 2.5em;
-margin: 5;
-padding: .5em 0 0;
-}
-
-}
-
-
-.youtube,
-.github,
-.twitter,
-.reddit {
-background-color: $font-color;
-}
-
-
-
-header{
-display:$flex;
-}
-
-h2{
-line-height: 280px;
-}
-
-
-img{
-max-width: 100%;
-height: auto;
-display:block;
-}
-
-
-
-
-@mixin header{
-color:rgba(12, 232, 164, 1);
-text-align:$tc;
-margin:50px;
-font-size:85px;
-
-
-}
-
-
-@mixin header2{
-color:rgba(12, 230, 120, 1);
-font-size:8vmin;
-
-
-}
-
-
-
-@mixin para{
-font-family:$font-family2;
-text-align:$tc;
-margin:25px;
-}
-
-
-
-@mixin Middle{
-max-width:70em;
-margin:auto;
-
-
-
-}
-
-footer{
-margin-bottom:40px;
-
-}
-
-@mixin Middle2{
-max-width:50em;
-margin:auto;
-}
-
-
-main{
-min-height: 1000px;
-height: auto !important;
-height: 600px;
-
-}
-
-
-body{
-background-color:$b-c-r;
-}
-
-*{
-margin:$zero;
-padding:$zero;
-}
-
-h1{
-color: $text-color;
-}
-
-header{
-@include header;
-font-family:$font-family1;
-}
-
-p{
-@include para;
-
-}
-
-
-main{
-background-color:$b-c-g;
-@include Middle;
-font-family:$font-family2;
-div{
-@include Middle2;
-text-align:$tc;
-}
-
-
-
-}
-
-
-footer{
-text-align:$tc;
-}
-
-
-
-
-
-@media only screen and (max-width: 1110px) {
-
-
-
-header{
-@include header2;
-
-}
-
-h2{
-display: inline-flex;
-line-height: 200px;
-}
-
-}
-$text-color:#333;
-$b-c-g:grey;
-$b-c-r:#E80C39;/*red*/
-$base-spacing:1em;
-$zero:0;
-$tc:center;/*text center*/
-$wi:100%;/*width 100%*/
-$linex:800px;
-$font-color:rgba(12, 232, 164, 1);
-$flex:flex;
-
-$font-family1: 'Roboto', sans-serif;
-$font-family2: 'Mina', sans-serif;
-
-
-
-
-
-
-
-
-.fontMedia{
+.fontMedia {
   display: block;
   margin: 0.5em;
   padding: 0;
@@ -217,164 +7,178 @@ $font-family2: 'Mina', sans-serif;
   color: white;
   text-decoration: none;
   font-size: 1.1em;
-  display: $flex;
-      flex-flow: column;
-      position: fixed;
-      top: 12em;
-      left: -.5em;
-      height: 12em;
-      width: 3em;
-
-
-      div{
-      	height: 2.5em;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 12em;
+  left: -0.5em;
+  height: 12em;
+  width: 3em;
+}
+.fontMedia div {
+  height: 2.5em;
   width: 2.5em;
   margin: 5;
-  padding: .5em 0 0;
+  padding: 0.5em 0 0;
 }
-
+.youtube, .github, .twitter, .reddit {
+  background-color: rgba(12, 232, 164, 1);
 }
-
-
-.youtube,
-.github,
-.twitter,
-.reddit {
-  background-color: $font-color;
+header {
+  display: flex;
 }
-
-
-
-header{
-	display:$flex;
+h2 {
+  line-height: 280px;
 }
-
-h2{
-	line-height: 280px;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-
-
-  img{
-  	    max-width: 100%;
-    height: auto;
-    display:block;
+footer {
+  margin-bottom: 40px;
+}
+main {
+  min-height: 1000px;
+  height: auto !important;
+  height: 600px;
+}
+body {
+  background-color: #e80c39;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: #333;
+}
+header {
+  color: rgba(12, 232, 164, 1);
+  text-align: center;
+  margin: 50px;
+  font-size: 85px;
+  font-family: 'Roboto', sans-serif;
+}
+p {
+  font-family: 'Mina', sans-serif;
+  text-align: center;
+  margin: 25px;
+}
+main {
+  background-color: grey;
+  max-width: 70em;
+  margin: auto;
+  font-family: 'Mina', sans-serif;
+}
+main div {
+  max-width: 50em;
+  margin: auto;
+  text-align: center;
+}
+footer {
+  text-align: center;
+}
+@media only screen and (max-width: 1110px) {
+  header {
+    color: rgba(12, 230, 120, 1);
+    font-size: 8vmin;
   }
-
-
-
-
-@mixin header{
-	color:rgba(12, 232, 164, 1);
-	text-align:$tc;
-	margin:50px;
-	font-size:85px;
-
-
-}
-
-
-@mixin header2{
-	color:rgba(12, 230, 120, 1);
-	font-size:8vmin;
-
-
+  h2 {
+    display: inline-flex;
+    line-height: 200px;
+  }
 }
 
 
 
-@mixin para{
-	font-family:$font-family2;
-	text-align:$tc;
-	margin:25px;
+.fontMedia {
+  display: block;
+  margin: 0.5em;
+  padding: 0;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 12em;
+  left: -0.5em;
+  height: 12em;
+  width: 3em;
 }
-
-
-
-@mixin Middle{
-	max-width:70em;
-	margin:auto;
-
-
-
+.fontMedia div {
+  height: 2.5em;
+  width: 2.5em;
+  margin: 5;
+  padding: 0.5em 0 0;
 }
-
-footer{
-	margin-bottom:40px;
-
+.youtube, .github, .twitter, .reddit {
+  background-color: rgba(12, 232, 164, 1);
 }
-
-@mixin Middle2{
-	max-width:50em;
-	margin:auto;
+header {
+  display: flex;
 }
-
-
-main{
-	min-height: 1000px;
-    height: auto !important;
-    height: 600px;
-
+h2 {
+  line-height: 280px;
 }
-
-
-body{
-	background-color:$b-c-r;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-
-*{
-	margin:$zero;
-	padding:$zero;
+footer {
+  margin-bottom: 40px;
 }
-
-h1{
-	color: $text-color;
+main {
+  min-height: 1000px;
+  height: auto !important;
+  height: 600px;
 }
-
-header{
-	@include header;
-	font-family:$font-family1;
+body {
+  background-color: #e80c39;
 }
-
-p{
-	@include para;
-
+* {
+  margin: 0;
+  padding: 0;
 }
-
-
-main{
-	background-color:$b-c-g;
-	@include Middle;
-	font-family:$font-family2;
-	div{
-	@include Middle2;
-	text-align:$tc;
+h1 {
+  color: #333;
 }
-
-
-
+header {
+  color: rgba(12, 232, 164, 1);
+  text-align: center;
+  margin: 50px;
+  font-size: 85px;
+  font-family: 'Roboto', sans-serif;
 }
-
-
-footer{
-	text-align:$tc;
+p {
+  font-family: 'Mina', sans-serif;
+  text-align: center;
+  margin: 25px;
 }
-
-
-   
-
-
- @media only screen and (max-width: 1110px) {
-
-
-
-	header{
-	@include header2;
-	
+main {
+  background-color: grey;
+  max-width: 70em;
+  margin: auto;
+  font-family: 'Mina', sans-serif;
 }
-
-	h2{
-	display: inline-flex;
-	line-height: 200px;
+main div {
+  max-width: 50em;
+  margin: auto;
+  text-align: center;
 }
-
-    }
+footer {
+  text-align: center;
+}
+@media only screen and (max-width: 1110px) {
+  header {
+    color: rgba(12, 230, 120, 1);
+    font-size: 8vmin;
+  }
+  h2 {
+    display: inline-flex;
+    line-height: 200px;
+  }
+}
